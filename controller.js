@@ -1,12 +1,15 @@
 var app = angular.module('app',[]);
 
-app.controller("controller", function($scope)
+app.controller("controller", function($scope, $http)
 
 {
-  $http.get('https://www.reddit.com/r/aww/.json')
-  .then(function(response){
-    console.log(response);
-    // var title=response.data.children[0].data.title;
-    // console.log(title);
-  });
+    $scope.redditData={};
+
+    $http.get('https://www.reddit.com/r/aww/.json')
+    .then(function successfulCallback(response){
+      console.log(response);
+
+      $scope.redditData=response.data.data.children;
+
+    });
 });

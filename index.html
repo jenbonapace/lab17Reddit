@@ -7,9 +7,11 @@
 
     <body ng-app="app" ng-controller="controller">
 
-<ul ng-repeat="post in response">
-          <li>{{response}}</li>
-        </ul>
+<div ng-repeat="post in redditData | limitTo:10">
+        <img src="{{post.data.thumbnail}}"/>
+        <p>Title:{{post.data.title}}</p>
+        <p>Author:{{post.data.author}} </p>
+  </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js" charset="utf-8"></script>
 <script src='script.js'></script>
