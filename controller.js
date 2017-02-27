@@ -1,6 +1,6 @@
-var red = angular.module('red',[]);
+var app = angular.module('app',[]);
 
-red.controller("ctrl", function($scope, $http)
+app.controller("controller", function($scope)
 
 {
   $http.get('https://www.reddit.com/r/aww/.json')
