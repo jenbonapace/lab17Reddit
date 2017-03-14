@@ -2,13 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
     <title>lab 17 Rich Man Reddit</title>
   </head>
 
     <body ng-app="app" ng-controller="controller">
 
 <div ng-repeat="post in redditData | limitTo:10">
-        <img src="{{post.data.thumbnail}}"/>
+        <div class="photo"><img src="{{post.data.thumbnail}}"/></div>
         <p>Title:{{post.data.title}}</p>
         <p>Author:{{post.data.author}} </p>
   </div>

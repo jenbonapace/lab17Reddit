@@ -1,0 +1,22 @@
+body{
+  background-color:#71B5B2
+}
+p {
+  color: black;
+  font-style: normal;
+  font-family:  sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+}
+
+.photo {
+    text-align: center;
+    margin: 0 auto;
+}
+
+img {
+    border-radius: 50%;
+    border-bottom: black;
+    border-style: dotted;
+}
